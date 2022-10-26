@@ -1,26 +1,35 @@
-.jumbotron_container {
+.bannerDetail {
     position: relative;
+    top: -90px;
+    margin-bottom: 5rem;
 }
 
 .shadow {
     position: absolute;
-    margin-top: -4rem;
     width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to top, rgba(255, 0, 0, 0.4), rgba(0, 0, 0, 0));
-    overflow-y: hidden;
+    height: 600px;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+}
+
+.detail_wrapper {
+    display: flex;
+    justify-content: center;
 }
 
 .image_movie {
-    position: absolute;
-    z-index: -1;
     width: 100%;
-    height: 100vh;
-    top: 0;
-    left: 0;
+    height: 600px;
+    background-size: cover;
 }
 
 .detail_movie {
     position: absolute;
-    top: 4 0%;
+    top: 14rem;
+    color: white;
+    width: 50%;
+    line-height: 30px;
+}
+
+.secondary {
+    color: rgb(239, 162, 157);
 }

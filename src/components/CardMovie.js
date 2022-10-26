@@ -9,6 +9,7 @@ import { BsFillStarFill } from "react-icons/bs";
 
 
 export default function CardMovie({ database }) {
+    console.log(database)
     const navigation = useNavigate()
 
     return (
