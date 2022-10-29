@@ -1,0 +1,13 @@
+.container {
+    margin-bottom: 2.5rem;
+}
+
+.movie_cast {
+    position: relative;
+    top: -6rem;
+    padding: 1rem;
+}
+
+.header {
+    margin-bottom: 1rem;
+}

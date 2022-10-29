@@ -45,7 +45,7 @@ export default function DetailMovie() {
             <Navigation />
             <BannerDetailMovie movie={database} />
             <CardCast movie={cast} />
-            {/* <FooterSection /> */}
+            <FooterSection />
         </div>
     )
 }

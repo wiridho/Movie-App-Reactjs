@@ -1,0 +1,27 @@
+:root {
+    --color-white: #fff;
+    --color-red: #f33f3f;
+}
+
+.banner_wrapper {
+    position: relative;
+    margin-top: -9rem;
+}
+
+.result_search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 15rem;
+}
+
+.detail_search {
+    position: absolute;
+    color: var(--color-white);
+
+}
+
+.img_banner_search {
+    height: 500px;
+    width: 100vw;
+}

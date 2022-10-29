@@ -49,7 +49,7 @@ export default function Navigation() {
 			<Navbar className='wrapper-nav'>
 				<Container className='navbar-container'>
 					<Nav className="navbar-nav w-100 d-flex justify-content-between align-items-center">
-						<Navbar.Brand href="#home" className="mt-3">
+						<Navbar.Brand href="/" className="mt-3">
 							<img
 								src="/logomovie.svg"
 								width="180"

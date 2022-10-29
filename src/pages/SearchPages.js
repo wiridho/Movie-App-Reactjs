@@ -2,6 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import CardMovie from '../components/CardMovie'
+import BannerSearchMovie from '../components/BannerSearchMovie'
+import Navigation from '../components/Navigation'
+import FooterSection from '../components/FooterSection'
+import SearchResult from '../components/SearchResult'
 
 
 export default function SearchPages() {
@@ -25,7 +29,11 @@ export default function SearchPages() {
 
     return (
         <div>
+            <Navigation />
+            <BannerSearchMovie query={query} />
+            <SearchResult query={query} />
             <CardMovie database={database} />
+            <FooterSection />
         </div>
     )
 }
