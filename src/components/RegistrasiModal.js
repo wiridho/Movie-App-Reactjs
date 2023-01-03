@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../Styling/RegistrasiModal.css'
 import '../Styling/Navigation.css'
 import axios from 'axios';
@@ -18,9 +18,14 @@ export default function RegistrasiModal({ setToken }) {
 
 	// State for showpassword
 	const [showPasswords, setShowPassword] = useState(false)
+	const [showPasswordsConfirm, setShowPasswordConfirm] = useState(false)
 
 	//function click icon
 	const clickIcon = () => setShowPassword(!showPasswords)
+
+	const clickIconPassConf = () => {
+		setShowPasswordConfirm(!showPasswordsConfirm)
+	}
 
 	// initial values
 	const initialValues = { first_name: '', last_name: '', email: '', password: '', password_confirmation: '' }
@@ -53,9 +58,7 @@ export default function RegistrasiModal({ setToken }) {
 			console.log(error)
 		}
 	}
-	useEffect(() => {
 
-	}, [])
 
 	const validate = (values) => {
 		const error = {}
@@ -126,8 +129,8 @@ export default function RegistrasiModal({ setToken }) {
 								<p className='text-danger'> {formError.password}</p>
 							</Form.Group>
 							<Form.Group className="mb-3 form-group" controlId="passwordConfirmation">
-								{(showPasswords === false) ? <BsFillEyeSlashFill className='icon' onClick={clickIcon} /> : <BsFillEyeFill className='icon' onClick={clickIcon} />}
-								<Form.Control type={(showPasswords === false) ? 'password' : 'text'} placeholder="Password Confirmation" onChange={handleChange} name='password_confirmation' value={formValues.password_confirmation} />
+								{(showPasswordsConfirm === false) ? <BsFillEyeSlashFill className='icon' onClick={clickIconPassConf} /> : <BsFillEyeFill className='icon' onClick={clickIconPassConf} />}
+								<Form.Control type={(showPasswordsConfirm === false) ? 'password' : 'text'} placeholder="Password Confirmation" onChange={handleChange} name='password_confirmation' value={formValues.password_confirmation} />
 								<p className='text-danger'> {formError.password_confirmation}</p>
 							</Form.Group>
 							<Button variant="danger" type="submit">
